@@ -18,10 +18,6 @@ class Perceptron(object):
     def __init__(self, alpha=0.01, max_iter=10):
         self.alpha = alpha
         self.max_iter = max_iter
-        # 初始化权重。数据集特征维数+1
-        self.w_ = np.zeros(X.shape[1]+1)
-        # 用于记录每一次迭代中误分类的样本数
-        self.errors_ = []
 
     def net_input(self, X):
         """ 计算下一层神经元输入"""
@@ -45,6 +41,11 @@ class Perceptron(object):
         ----------
         self: object
         """
+        # 初始化权重。数据集特征维数+1
+        self.w_ = np.zeros(X.shape[1]+1)
+        # 用于记录每一次迭代中误分类的样本数
+        self.errors_ = []
+
         for _ in range(self.max_iter):
             error = 0
             # 每次迭代遍历一遍数据集
@@ -81,6 +82,6 @@ if __name__ == '__main__':
     plt.ylim(-0.1,6)
     # 画出超平面（在本例中即是一条直线）
     line_x = np.arange(0,4)
-    line_y = line_x * (-model.w_[2] / model.w_[1]) - (model.w_[0]/ model.w_[1])
+    line_y = line_x * (-model.w_[1] / model.w_[2]) - (model.w_[0]/ model.w_[2])
     plt.plot(line_x, line_y)
     plt.show()
