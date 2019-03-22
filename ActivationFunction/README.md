@@ -16,7 +16,7 @@
 
 4. **ReLU函数**
 
-    $$a(x) = \begin{cases} x, &x>0 \\ 1, &x\leq0 \end{cases}$$
+    $$a(x) = \begin{cases} x, &x>0 \\ 1, &x\leq0 \end{cases}​$$
 
 ### 二 、线性函数和非线性函数
 
