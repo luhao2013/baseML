@@ -233,7 +233,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="980" />
@@ -251,11 +251,6 @@
             <path>
               <item name="baseML" type="b2602c69:ProjectViewProjectNode" />
               <item name="baseML" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="baseML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="baseML" type="462c0819:PsiDirectoryNode" />
-              <item name="ActivationFunction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="baseML" type="b2602c69:ProjectViewProjectNode" />
@@ -464,8 +459,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49788135" visible="true" weight="0.13270777" />
       <window_info id="Structure" order="1" sideWeight="0.50211865" side_tool="true" weight="0.25938338" />
