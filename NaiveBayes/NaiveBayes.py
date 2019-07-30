@@ -41,9 +41,9 @@ class NaiveBayes(object):
         predict_value = deepcopy(self.label_frequency)
         for label in predict_value:  # 计算每个类别的联合概率
             for i, value in enumerate(X):
-                predict_value[label] *= self.value_label_frequency[str(i)+"'"+str(value)+"|"+str(label)]]
-                predict_label = max(predict_value, key=predict_value.get)  # 概率最大值对应的类别
-                return predict_label
+                predict_value[label] *= self.value_label_frequency[str(i)+"'"+str(value)+"|"+str(label)]
+        predict_label = max(predict_value, key=predict_value.get)  # 概率最大值对应的类别
+        return predict_label
 
 if __name__ == '__main__':
     model = NaiveBayes()
