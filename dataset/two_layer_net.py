@@ -1,10 +1,11 @@
 import sys
 import os
 sys.path.append(os.pardir)
-from MLP.utils import *
+#from MLP.utils import *
 import numpy as np
 from collections import OrderedDict
 from dataset.layers import *
+
 
 class TwoLayerNet:
     def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
@@ -78,6 +79,7 @@ class TwoLayerNet:
         grads['b1'] = np.sum(da1, axis=0)
 
         return grads
+
 
 class Two_Layer_Net_bp:
 

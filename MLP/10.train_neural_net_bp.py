@@ -12,7 +12,7 @@ from dataset.two_layer_net import Two_Layer_Net_bp
 
 network = Two_Layer_Net_bp(input_size=784, hidden_size=50, output_size=10)
 
-iters_num = 1000000
+iters_num = 100000
 train_size = x_train.shape[0]
 batch_size = 100
 learning_rate = 0.1
@@ -29,7 +29,7 @@ for i in range(iters_num):
     t_batch = t_train[batch_mask]
 
     # 通过误差反向传播发求梯度
-    # grad = network.numerical_gradient(x_batch, t_batch)
+    #grad = network.numerical_gradient(x_batch, t_batch)
     grad = network.gradient(x_batch, t_batch)
 
     # 更新
@@ -44,4 +44,4 @@ for i in range(iters_num):
         test_acc = network.accuracy(x_test, t_test)
         train_acc_list.append(train_acc)
         test_acc_list.append(test_acc)
-        print(i,'step:', train_acc, test_acc)
+        print(i,'step:', loss, train_acc, test_acc)
