@@ -119,13 +119,11 @@ class BatchNormalization:
         self.gamma = gamma
         self.beta = beta
         self.momentum = momentum
-        self.input_shape = None # Conv層の場合は4次元、全結合層の場合は2次元  
+        self.input_shape = None
 
-        # テスト時に使用する平均と分散
         self.running_mean = running_mean
         self.running_var = running_var  
-        
-        # backward時に使用する中間データ
+
         self.batch_size = None
         self.xc = None
         self.std = None
@@ -201,13 +199,11 @@ class Convolution:
         self.b = b
         self.stride = stride
         self.pad = pad
-        
-        # 中間データ（backward時に使用）
+
         self.x = None   
         self.col = None
         self.col_W = None
-        
-        # 重み・バイアスパラメータの勾配
+
         self.dW = None
         self.db = None
 
