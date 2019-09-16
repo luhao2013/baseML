@@ -104,5 +104,8 @@ Yann LeCun在1998年的一篇文章上率先提出了一种初始化方法。
 - 对于sigmoid、tanh激活函数，初始化值太大，使得流入激活函数的值过大，造成饱和现象，当反相传播时，会使得梯度极小，导致梯度弥散。（ReLU函数不受此影响）
 - 初始化太小时，经过多层网络，输出值变得极小，在反向传播时也会使得梯度极小，导致梯度弥散。（ReLU函数也受此影响！）
 
-### 因子分解机
+### 十一、因子分解机
 1. [FM](https://github.com/luhao2013/baseML/blob/master/FM/FM.py) 
+
+### 十二、指标
+1. [AUC计算](https://github.com/luhao2013/baseML/blob/master/metric/auc.py)
