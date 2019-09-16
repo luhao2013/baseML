@@ -39,6 +39,7 @@ def roc_auc(labels,preds,n_bins=1000):
     accumulated_neg = 0
     satisfied_pair = 0
     for i in range(n_bins):
+        # 该桶里每个正样本都大于accumulated_neg个负样本，对于桶内则大于一半的负样本
         satisfied_pair += (pos_histogram[i]*accumulated_neg + pos_histogram[i]*neg_histogram[i]*0.5)
         accumulated_neg += neg_histogram[i]
     return round(satisfied_pair / float(total_case), 2)
