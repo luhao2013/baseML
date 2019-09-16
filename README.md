@@ -108,4 +108,8 @@ Yann LeCun在1998年的一篇文章上率先提出了一种初始化方法。
 1. [FM](https://github.com/luhao2013/baseML/blob/master/FM/FM.py) 
 
 ### 十二、指标
-1. [AUC计算](https://github.com/luhao2013/baseML/blob/master/metric/auc.py)
+1. [AUC计算](https://github.com/luhao2013/baseML/blob/master/metric/auc.py)  
+AUC的计算，是使用直方图近似来计算的，这样避免了排序带来的O(NlogN)的复杂度，只需要O(N)的复杂度。
+这和XGboost中的直方图近似取代预排序是一种思想。把连续的浮点特征值离散化成 k 个整数，同时构造一个宽度为 k 的直方图。
+在遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，
+然后根据直方图的离散值，遍历寻找最优的分割点。
